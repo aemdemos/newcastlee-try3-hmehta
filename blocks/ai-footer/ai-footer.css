@@ -1,28 +1,76 @@
-.ai-footer > div {
-  display: flex;
-  flex-direction: column;
+
+.ai-footer-wrapper {
+  background-color: #e3e3e3; /* Background color similar to the provided image */
+  padding: 20px;
 }
 
-.ai-footer img {
+.ai-footer {
+  display: flex;
+  justify-content: space-between; /* Ensures the logo and the links are spaced out */
+  align-items: flex-start; /* Aligns the items at the top */
+}
+
+.ai-footer > div {
+  display: flex;
+  flex-direction: row; /* Ensures the inner divs are side-by-side */
   width: 100%;
 }
 
+.ai-footer-img-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligns the logo and text to the left */
+  margin-right: 20px; /* Adds space between the logo/title and the support links */
+}
+
+.ai-footer-img-col p {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.ai-footer-img-col picture {
+  margin-bottom: 10px; /* Adds space between the image and the text */
+}
+
+.ai-footer h2 {
+  margin-bottom: 10px; /* Adds space between the title and the links */
+}
+
+.ai-footer ul {
+  display: flex;
+  flex-wrap: wrap; /* Allows the links to wrap to the next line */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0 20px; /* Adds consistent horizontal spacing between the links */
+}
+
+.ai-footer ul li {
+  flex: 1 1 calc(33.33% - 20px); /* Distributes the links evenly in three columns */
+  margin-bottom: 10px;
+}
+
+.ai-footer ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Remove the order and width rules that are misaligning the content */
 .ai-footer > div > div {
-  order: 1;
+  order: unset;
 }
 
 .ai-footer > div > .ai-footer-img-col {
-  order: 0;
+  order: unset;
+  width: auto;
 }
 
-.ai-footer > div > .ai-footer-img-col img {
-  display: block;
-}
-
-@media (width >= 900px) {
+@media (min-width: 900px) {
   .ai-footer > div {
-    align-items: center;
-    flex-direction: unset;
+    align-items: flex-start; /* Aligns items at the top */
+    flex-direction: row; /* Ensures side-by-side layout */
     gap: 24px;
   }
 
