@@ -1,0 +1,33 @@
+.ai-contact-us > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.ai-contact-us img {
+  width: 100%;
+}
+
+.ai-contact-us > div > div {
+  order: 1;
+}
+
+.ai-contact-us > div > .ai-contact-us-img-col {
+  order: 0;
+}
+
+.ai-contact-us > div > .ai-contact-us-img-col img {
+  display: block;
+}
+
+@media (width >= 900px) {
+  .ai-contact-us > div {
+    align-items: center;
+    flex-direction: unset;
+    gap: 24px;
+  }
+
+  .ai-contact-us > div > div {
+    flex: 1;
+    order: unset;
+  }
+}

@@ -1,0 +1,33 @@
+.calendar > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.calendar img {
+  width: 100%;
+}
+
+.calendar > div > div {
+  order: 1;
+}
+
+.calendar > div > .calendar-img-col {
+  order: 0;
+}
+
+.calendar > div > .calendar-img-col img {
+  display: block;
+}
+
+@media (width >= 900px) {
+  .calendar > div {
+    align-items: center;
+    flex-direction: unset;
+    gap: 24px;
+  }
+
+  .calendar > div > div {
+    flex: 1;
+    order: unset;
+  }
+}

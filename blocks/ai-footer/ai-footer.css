@@ -1,0 +1,33 @@
+.ai-footer > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.ai-footer img {
+  width: 100%;
+}
+
+.ai-footer > div > div {
+  order: 1;
+}
+
+.ai-footer > div > .ai-footer-img-col {
+  order: 0;
+}
+
+.ai-footer > div > .ai-footer-img-col img {
+  display: block;
+}
+
+@media (width >= 900px) {
+  .ai-footer > div {
+    align-items: center;
+    flex-direction: unset;
+    gap: 24px;
+  }
+
+  .ai-footer > div > div {
+    flex: 1;
+    order: unset;
+  }
+}
