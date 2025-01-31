@@ -1,0 +1,71 @@
+
+/* Ensure the top-level wrapper takes the full width of the block */
+.ai-header-top-wrapper {
+  background-color: #e0e0e0; /* Light grey background */
+  padding: 10px; /* Optional padding for better spacing */
+  max-width: unset;
+}
+
+/* Use flexbox to align child elements side by side */
+.ai-header-top > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+/* Left section styling */
+.ai-header-top > div > div:first-child {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+/* Right section styling */
+.ai-header-top > div > div:last-child {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+/* Hide unnecessary elements */
+.ai-header-top ul,
+.ai-header-top p.button-container,
+.ai-header-top picture,
+.ai-header-top a[title="Select Language​▼"] {
+  display: none;
+}
+
+/* Ensure the correct text is displayed on the left */
+.ai-header-top p:first-of-type {
+  display: none;
+}
+
+.ai-header-top > div > div:first-child::before {
+  content: 'NSW Department of Education';
+  display: block;
+  color: black; /* Ensure the text color contrasts with the background */
+  font-weight: bold;
+  font-size: 1em; /* Adjust the font size if necessary */
+}
+
+/* Styling for text elements */
+.ai-header-top p {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+/* Ensure the text and icon on the right are inline */
+.ai-header-top p:last-of-type {
+  margin-left: 10px;
+}
+
+/* Specific styling for the "Log in" text */
+.ai-header-top p:last-of-type::after {
+  content: '▼';
+  margin-left: 5px;
+  font-size: 0.8em;
+}
